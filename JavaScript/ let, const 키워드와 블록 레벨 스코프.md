@@ -135,13 +135,9 @@ console.log(window.y); // 2
 console.log(y); // 2
 
 // 함수 선언문으로 정의한 전역 함수는 전역 객체 window의 프로퍼티다.
-console.log(window.foo); //   
-f  
- foo() {}
+console.log(window.foo); // f foo() {}
 // 전역 객체 window의 프로퍼티는 전역 변수처럼 사용할 수 있다.
-console.log(foo); //   
-f  
- foo() {}  
+console.log(foo); // f foo() {}  
 ```  
   
 let 키워드로 선언한 전역 변수는 전역 객체의 프로퍼티가 아니다. let 전역 변수는 보이지 않는 개념적인 블록(전역 렉시컬 환경의 선언적 환경 레코드) 내에 존재하게 된다.  
