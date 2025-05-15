@@ -92,9 +92,7 @@ var value = 1;
 const obj = {
 	value: 100,
 	foo () {
-		console.log("foo's this: ", this); // {value: 100, foo:   
-f  
-}
+		console.log("foo's this: ", this); // {value: 100, foo: f}
 		console.log("foo's this.value ", this.value); // 100
 		
 		// 메서드 내에서 정의한 중첩 함수
@@ -118,9 +116,7 @@ var value = 1;
 const obj = {
 	value: 100,
 	foo() {
-		console.log("foo's this: ", this); // {value: 100, foo:   
-f  
-}
+		console.log("foo's this: ", this); // {value: 100, foo: f}
 		// 콜백 함수 내부의 this에는 전역 객체가 바인딩된다.
 		setTimeout(function () {
 			console.log("callback's this: ", this); // window
@@ -290,18 +286,14 @@ const thisArg = { a: 1 };
 console.log(getThisBinding.apply(thisArg, [1, 2, 3]));
 // Arguments(3) [1, 2, 3, callee:   
 f  
-, Symbol(Symbol.iterator):   
-f  
-]
+, Symbol(Symbol.iterator): f]
 // {a: 1}
 
 // call 메서드는 호출할 함수의 인수를 쉼표로 구분한 리스트 형식으로 전달한다.
 console.log(getThisBinding.call(thisArg, 1, 2, 3));
 // Arguments(3) [1, 2, 3, callee:   
 f  
-, Symbol(Symbol.iterator):   
-f  
-]
+, Symbol(Symbol.iterator): f]
 // {a: 1}  
 ```  
 apply와 call 메서드는 호출할 함수에 인수를 전달하는 방식만 다를 뿐 this로 사용할 객체를 전달하면서 함수를 호출하는 것은 동일하다.  
