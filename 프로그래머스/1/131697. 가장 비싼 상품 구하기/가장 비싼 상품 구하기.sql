@@ -1,0 +1,3 @@
+SELECT
+ Max(price) MAX_PRICE
+FROM PRODUCT
